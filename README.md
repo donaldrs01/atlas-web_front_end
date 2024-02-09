@@ -1,1 +1,1 @@
-README for my work with front end web work
+README for my directory of beginning front end development
