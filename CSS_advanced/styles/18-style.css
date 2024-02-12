@@ -445,7 +445,7 @@ a:active  /* active - applies style during moment link is clicked */
 
 .nav .nav-link {
     display:block;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
 }
 
 .nav .nav-link:hover {
