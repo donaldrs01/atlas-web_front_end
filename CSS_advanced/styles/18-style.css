@@ -428,7 +428,7 @@ a:active  /* active - applies style during moment link is clicked */
 
 .nav {
     margin: 0;
-    padding: .5rem 0; 
+    padding: 0; 
     text-align: center;
     list-style: none;;
     
@@ -449,7 +449,7 @@ a:active  /* active - applies style during moment link is clicked */
 }
 
 .nav .nav-link:hover {
-  color:var(--color-primary);
+  color:var(--nav-item-link-hover);
 }
 
 .visually-hidden {
