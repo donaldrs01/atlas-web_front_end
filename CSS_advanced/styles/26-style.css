@@ -524,13 +524,13 @@ a:active  /* active - applies style during moment link is clicked */
     text-align: center;;
 }
 
-.card-testimonial .class-avatar {
+.card-testimonial.class-avatar {
    border-radius: 50%;
    width:10rem;
    height:10rem; 
 }
 
-.card-testimonial .card-quote cite {
+.card-testimonial.card-quote cite {
    padding:1rem 0 0;
    color: var(--color-primary);
    display: block;
