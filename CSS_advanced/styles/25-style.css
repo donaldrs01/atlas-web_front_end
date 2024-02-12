@@ -435,7 +435,7 @@ a:active  /* active - applies style during moment link is clicked */
 .button {
     display:var(--button-display);
     padding:var(--button-padding);
-    border-style: var(--button-border);
+    border: var(--button-border);
     font-size: var(--button-font-size);
     color:var(--button-color);
     text-decoration: var(--button-text-decoration);
