@@ -518,8 +518,7 @@ a:active  /* active - applies style during moment link is clicked */
     display: block;
 }
 
-.social-link,
-.social-link svg {
+.social-link > svg { /* selects all children svg elements */
     fill: var(--text-color);
 }
 
