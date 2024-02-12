@@ -429,7 +429,7 @@ a:active  /* active - applies style during moment link is clicked */
     padding: 0.5rem;
 }
 
-col-1-2 {
+.col-1-2 {
     width: 50%;
     float: left;
     padding: 0.5rem;
