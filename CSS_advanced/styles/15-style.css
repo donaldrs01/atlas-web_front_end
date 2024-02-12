@@ -372,8 +372,10 @@
     --section-title-color: var(--color-black);
 }
 
-* { /* universal element selector */
-    box-sizing: border-box;
+*, /* universal element selector */
+*::before,  /* access content before/after element */
+*::after {
+    box-sizing:border-box; 
 }
 
 html {
