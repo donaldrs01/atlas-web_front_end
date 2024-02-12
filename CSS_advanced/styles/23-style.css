@@ -518,7 +518,7 @@ a:active  /* active - applies style during moment link is clicked */
     display: block;
 }
 
-.social-link.svg {
+.social-link svg {
     fill: var(--text-color);
 }
 
