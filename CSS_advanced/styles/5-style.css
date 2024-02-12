@@ -22,10 +22,9 @@ html {
 }
 
 body {
-    font-size:var(--font-size-medium);
     color:var(--text-color);
     font-family:var(--font-family-base);
-    font-weight:var(--font-weight-regular);
+    font-size:var(--font-size-medium);
 }
 
 a {
