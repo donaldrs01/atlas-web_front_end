@@ -383,7 +383,7 @@
     --nav-item-letter-spacing: .04rem;
     --nav-item-display:inline-block;
     --nav-item-margin:0 0 3rem;
-    --nav-item-link-hover:var(--color-primary);
+    --nav-item-link-hover:var(var(--color-white);
     --button-display: inline-block;
     --button-padding: 1.5rem 3rem;
     --button-border: 0.2rem solid var(--color-primary);
@@ -517,7 +517,7 @@ a:active  /* active - applies style during moment link is clicked */
     left:0;
     background-color: var(--color-white);
     width:0;
-    height:20%;
+    height:0.2rem;
 }
 
 .nav .nav-link {
