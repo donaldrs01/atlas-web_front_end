@@ -383,7 +383,7 @@
     --nav-item-letter-spacing: .04rem;
     --nav-item-display:inline-block;
     --nav-item-margin:0 0 3rem;
-    --nav-item-link-hover:var(var(--color-white);
+    --nav-item-link-hover:var(--color-white);
     --button-display: inline-block;
     --button-padding: 1.5rem 3rem;
     --button-border: 0.2rem solid var(--color-primary);
