@@ -1,0 +1,1 @@
+This project directory is for my work learning the developer tools in Chrome. 
