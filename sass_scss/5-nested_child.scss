@@ -1,0 +1,10 @@
+/* 
+Nested declaration to target the first child of body tag
+*/
+body {
+    color: #3D3D3D;
+
+    > .red {
+        color: #FF0000;
+    }
+}
