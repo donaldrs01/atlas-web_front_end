@@ -1,0 +1,6 @@
+// Uses @for loop to create multiple header tags //
+@for $x from 1 through 5 {
+    h#{$x} { // creates header element based on value of 'x' using interpolation //
+        font-size: #{$x}px; // sets px size to value of 'x' //
+    }
+}
