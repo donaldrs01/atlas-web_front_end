@@ -1,3 +1,4 @@
+/* Use of mixin to create reusable style setting */
 @mixin margin-set($margin) {
     margin-left: $margin;
     margin-right: $margin;
