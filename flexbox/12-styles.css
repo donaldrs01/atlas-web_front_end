@@ -558,3 +558,23 @@
         padding: 7rem 0 0;
         z-index: 2;
     }
+
+    .main-article {
+      padding: 5rem 0;
+    }
+
+    /* Post
+    ============================= */
+
+    .post {
+      display: flex;
+    }
+
+    .post-content {
+      width: 100%;
+    }
+
+    .post-aside {
+      order: -1; /* setting order to -1 ensures that it's displayed first */
+      min-width: 20%;
+    }
