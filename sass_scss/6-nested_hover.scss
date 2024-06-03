@@ -1,0 +1,10 @@
+/* 
+Nested declaration to target button tags with hover modification
+*/
+button {
+    color: #FF0000;
+
+    &:hover { /* nested selector targets hover setting */
+        color: #00FF00;
+    }
+}
