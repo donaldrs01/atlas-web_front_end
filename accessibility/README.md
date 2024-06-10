@@ -1,0 +1,1 @@
+This is a README for my project directory dealing with accessibility features and functions.
