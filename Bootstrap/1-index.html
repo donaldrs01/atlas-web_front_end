@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>Holberton - Web Stack - Bootstrap</title>
+        <meta name="description" content="Bootstrap is a free and open-source CSS framework">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="row">
+            <div class="bg-primary p-2 text-white text-center col-12 col-lg-3">Primary</div>
+            <div class="bg-success p-2 text-white text-center col-12 col-lg-3">Success</div>
+            <div class="bg-danger p-2 text-white text-center col-12 col-lg-3">Danger</div>
+            <div class="bg-warning p-2 text-white text-center col-12 col-lg-3">Warning</div>
+        </div>
+    
+        <hr /> 
+
+        <div class="row">
+            <div class="bg-primary p-2 text-white text-center col-12 col-sm-3">Primary</div>
+            <div class="bg-success p-2 text-white text-center col-12 col-sm-3">Success</div>
+            <div class="bg-danger p-2 text-white text-center col-12 col-sm-3">Danger</div>
+            <div class="bg-warning p-2 text-white text-center col-12 col-sm-3">Warning</div>
+
+        </div>
+    
+        <hr />
+        <!-- cell 1 2/12, cell 2 4/12, cell 3 6/12-->
+        <div class="row"> 
+            <div class="bg-primary p-2 text-white text-center col-12 col-lg-2 ">Primary</div>
+            <div class="bg-success p-2 text-white text-center col-12 col-lg-4">Success</div>
+            <div class="bg-danger p-2 text-white text-center col-12 col-lg-6">Danger</div>
+        </div>
+
+        <hr />
+        <!-- Ordering cells based on screen size using .order (**default sise is 'XS' (<576px))-->
+        <div class="row">
+            <div class="bg-primary p-2 text-white text-center col-3 order-4 order-xl-1 order-lg-2 order-md-3 order-sm-4">Primary</div>
+            <div class="bg-success p-2 text-white text-center col-3 order-1 order-xl-2 order-lg-3 order-md-4 order-sm-1">Success</div>
+            <div class="bg-danger p-2 text-white text-center col-3 order-2 order-xl-3 order-lg-4 order-md-1 order-sm-2">Danger</div>
+            <div class="bg-warning p-2 text-white text-center col-3 order-3 order-xl-4 order-lg-1 order-md-2 order-sm-3">Warning</div>
+        </div>
+
+        <hr />
+
+        <div class="d-flex justify-content-between flex-md-row flex-column"> <!-- flex row properties on medium and above, column on sizes below. cells on either end of container -->
+            <div class="bg-primary p-2 text-white text-center col-12 col-md-2">Primary</div>
+            <div class="bg-success p-2 text-white text-center col-12 col-md-2">Success</div>
+        </div>
+
+        <hr />
+        <!-- Using offset-md-2 to double the margin between first two cells in screens md size and above-->
+        <div class="d-flex justify-content-between flex-md-row flex-column">
+            <div class="bg-primary p-2 text-white text-center col-12 col-md-2 ">Primary</div>
+            <div class="bg-success p-2 text-white text-center col-12 col-md-2 offset-md-2">Success</div>
+            <div class="bg-danger p-2 text-white text-center col-12 col-md-2">Danger</div>
+        </div>
+    </body>
+</html>
