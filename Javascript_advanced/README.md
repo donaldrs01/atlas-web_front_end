@@ -1,0 +1,1 @@
+This project directory contains work dealing with more advance tasks that make use of JS.  This includes lexical scoping and closure methods. 
