@@ -10,7 +10,7 @@ function countPrimeNumbers() {
         const prime_array = [];
         for (let num =2; num <= 100; num++) {
             if (checkPrime(num)) {
-                prime_array.push(num); // Run prime function -> push primes into array
+                prime_array.push(num); // Run primee function -> push primes into array
             }
         }
 
