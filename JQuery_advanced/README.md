@@ -1,0 +1,1 @@
+This directory contains project work dealing with more advance uses of jQuery. 
