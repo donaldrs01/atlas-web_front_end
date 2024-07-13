@@ -1,0 +1,1 @@
+README for my project directory related to cookies / local storage. 
