@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 2</title>
+    </head>
+    <body>
+        <h1>Login to the website</h1>
+
+        <input type="text" id="firstname" placeholder="Firstname">
+        <input type="text" id="email" placeholder="Email">
+        <button type="button" onclick="setCookies()">Log me in</button>
+
+        <h1>Cookies</h1>
+        <button type="button" onclick="showCookies()">Show the cookies</button>
+    </body>
+    <script>
+
+        function setCookies() {
+            let firstName = document.getElementById("firstname").value;
+            let email = document.getElementById("email").value;
+            // set 10 day expiration date on cookies
+            let expiredate = new Date();
+            expiredate.setTime(expiredate.getTime() + (10*24*60*60*1000)) // converts 10 days into milliseconds
+            let expires = "expires=" + expiredate.toUTCString();
+
+            document.cookie = `firstname=${firstName};${expires}`;
+            document.cookie = `email=${email};${expires}`;
+        }
+
+        function getCookie(name) {
+            // split list of cookies into array of individual cookies separating at ";"
+            let cookieList = document.cookie.split(';');
+            for (let cookie of cookieList) {
+                // split each cookie string into a name/value pair
+                const [cookieName, cookieValue] = cookie.split('=');
+                if (cookieName === name) {
+                    return cookieValue;
+                }
+            }
+            // return empty string if 'name' doesn't exist
+            return "";            
+        }
+
+
+        function showCookies() {
+            let cookies = document.cookie;
+            let p = document.createElement("p");
+            p.innerHTML = `Email: ${email} - Firstname: ${firstName}`;
+            document.body.appendChild(p);
+        }
+    </script>
+</html>
