@@ -45,8 +45,12 @@
 
 
         function showCookies() {
-            let cookies = document.cookie;
+            let firstName = getCookie('firstname');
+            let email = getCookie('email');
+            console.log(`First Name: ${firstName}`);
+            console.log(`Email: ${email}`);
             let p = document.createElement("p");
+
             p.innerHTML = `Email: ${email} - Firstname: ${firstName}`;
             document.body.appendChild(p);
         }
