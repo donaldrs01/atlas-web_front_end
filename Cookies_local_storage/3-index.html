@@ -43,17 +43,6 @@
             return "";            
         }
 
-        function showCookies() {
-            let firstName = getCookie('firstname');
-            let email = getCookie('email');
-            console.log(`First Name: ${firstName}`);
-            console.log(`Email: ${email}`);
-            let p = document.createElement("p");
-
-            p.innerHTML = `Email: ${email} - Firstname: ${firstName}`;
-            document.body.appendChild(p);
-        }
-
         function showForm() {
             const welcomeMessage = document.getElementById('welcome-Message');
             // If welcomeMessage exists, remove it
