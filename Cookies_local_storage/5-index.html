@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5: Shopping Cart</title>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <div id="storediv"></div>
+    <div id="cartdiv"></div>
+    <button id="emptyCartBtn">Empty Cart</button>
+    <script>
+
+        const availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
+        // check for local storage support
+        if (typeof(Storage) === "undefined") {
+            alert("Sorry, your browser does not support Web storage. Try again with a better one.");
+        } else {
+            // if local storage support, call functions
+            createStore();
+            displayCart();
+        }
+
+        function addItemToCart(item) {
+            localStorage.setItem(item, true);
+            displayCart();
+        }
+
+        function createStore() {
+            const storeDiv = document.getElementById("storediv");
+            const ul = document.createElement('ul');
+            // loop through available items and add them to the UL (store)
+            availableItems.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = item;
+                // when li element is clicked, add it to the cart
+                li.addEventListener("click", () => addItemToCart(item));
+                ul.appendChild(li);
+            });
+            storeDiv.appendChild(ul); // add UL to the DOM 
+        }
+
+        function displayCart() {
+            const cart = document.getElementById("cartdiv");
+            // clear existing content so item count stays current
+            cart.innerHTML = ""; 
+            let cartItems = 0;
+            availableItems.forEach(item => {
+                if (localStorage.getItem(item)) {
+                    cartItems++;
+                }
+        });
+            if (cartItems > 0) {
+                const p = document.createElement("p");
+                p.textContent = `You previously had ${cartItems} items in your cart.`;
+                cart.appendChild(p);
+            }
+        }
+
+        // function to empty cart and display current item count
+        function emptyCart() {
+            availableItems.forEach(item => {
+                localStorage.removeItem(item);
+            })
+            displayCart();;
+        }
+
+        document.getElementById("emptyCartBtn").addEventListener("click", emptyCart);
+        
+    </script>
+</body>
+</html>
