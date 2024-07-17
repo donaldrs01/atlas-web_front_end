@@ -9,7 +9,7 @@
     <h1>Shopping Cart</h1>
     <div id="storediv"></div>
     <div id="cartdiv"></div>
-    <button id="emptyCartBtn">Empty Cart</button>
+    <!-- <button id="emptyCartBtn">Empty Cart</button> !-->
     <script>
 
         const availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
@@ -61,3 +61,63 @@
             sessionStorage.clear();
             displayCart();
         }
+
+        function createStore() {
+            const storeDiv = document.getElementById("storediv");
+
+            const h2 = document.createElement("h2");
+            h2.textContent = "Available products:";
+            storeDiv.appendChild(h2);
+
+            const ul = document.createElement("ul");
+            // loop through available items and add them to the UL (store)
+            availableItems.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = item;
+                // when li element is clicked, add it to the cart
+                li.addEventListener("click", () => addItemToCart(item));
+                ul.appendChild(li);
+            });
+            storeDiv.appendChild(ul); // add UL to the DOM 
+        }
+
+        function displayCart() {
+            const cartDiv = document.getElementById("cartdiv");
+            // check if h2 tag already exists - 
+            let h2 = cartDiv.querySelector("h2");
+            if (!h2) {
+                h2 = document.createElement("h2");
+                h2.textContent = "Your cart:";
+                cartDiv.appendChild(h2);
+            }
+            // check if cartContent exists and create/update
+            let cartContent = cartDiv.querySelector("#cartContent");
+            if (!cartContent) {
+                cartContent = document.createElement("div");
+                cartContent.id = "cartContent";
+                cartDiv.appendChild(cartContent);
+            }
+            // clear existing items in cart
+            cartContent.innerHTML = "";
+            
+            updateCart();
+        }
+
+        function updateCart() {
+            const cart = getCartFromStorage();
+            const cartContent = document.getElementById("cartContent");
+            let cartItems = 0;
+            // update cartItems with the number of each item 
+            for (const item in cart) {
+                cartItems += cart[item];
+
+                const p = document.createElement("p");
+                p.textContent = `${item}: ${cart[item]}`;
+            }
+
+
+        }
+        
+    </script>
+</body>
+</html>
