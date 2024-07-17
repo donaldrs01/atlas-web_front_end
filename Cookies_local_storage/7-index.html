@@ -21,3 +21,43 @@
             createStore();
             displayCart();
         }
+
+        function getCartFromStorage() {
+            const cart = sessionStorage.getItem("cart");
+            // if cart exists in storage, parses JSON string and returns object.
+            // if cart not in storage, returns an empty object
+            return cart ? JSON.parse(cart) : {};
+        }
+
+        function addItemToCart(item) {
+            // retreive current cart from storage
+            const cart = getCartFromStorage();
+            // increment the item count if it's already in the cart
+            if (cart[item]) {
+                cart[item]++;
+            // otherwise, add 1 to cart
+            } else {
+                cart[item] = 1;
+            }
+            // stpre the updated cart in session storage
+            sessionStorage.setItem("cart", JSON.stringify(cart));
+            displayCart();
+        }
+
+        function removeItemFromCart(item) {
+            // retrieve current cart from storage
+            const cart = getCartFromStorage();
+            // if item is in cart, remove it
+            if (cart[item]) {
+                delete cart[item];
+            }
+            // update cart and display
+            sessionStorage.setItem("cart", JSON.stringify(cart));
+            displayCart();
+        }
+
+        function clearCart() {
+            // clears entire session storage and displays empty cart
+            sessionStorage.clear();
+            displayCart();
+        }
