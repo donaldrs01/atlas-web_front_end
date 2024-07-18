@@ -107,17 +107,27 @@
             const cart = getCartFromStorage();
             const cartContent = document.getElementById("cartContent");
             let cartItems = 0;
+
+            // 'Clear my cart' item //
+            if (Object.keys(cart).length > 0) {
+                const clearCartitem = document.createElement("li");
+                clearCartitem.textContent = "Clear my cart";
+                clearCartitem.addEventListener("click", clearCart);
+                cartContent.appendChild(clearCartitem);
+            }
             // update cartItems with the number of each item 
             for (const item in cart) {
                 cartItems += cart[item];
 
                 const p = document.createElement("p");
-                p.textContent = `${item}: ${cart[item]}`;
+                p.innerHTML = `${item} x ${cart[item]} <span class="remove-link" onclick="removeItemFromCart('${item}')">(remove)</span>`;
+                cartContent.appendChild(p);
             }
 
-
+            if (cartItems === 0) {
+                cartContent.textContent = "Your cart is empty.";
+            }
         }
-        
     </script>
 </body>
 </html>
