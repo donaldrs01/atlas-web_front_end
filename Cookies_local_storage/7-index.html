@@ -25,7 +25,7 @@
         function getCartFromStorage() {
             const cart = sessionStorage.getItem("cart");
             // if cart exists in storage, parses JSON string and returns object.
-            // if cart not in storage, returns an empty object
+            // if cart not in session storage, returns an empty object
             return cart ? JSON.parse(cart) : {};
         }
 
