@@ -120,7 +120,7 @@
                 cartItems += cart[item];
 
                 const p = document.createElement("p");
-                p.innerHTML = `${item} x ${cart[item]} <span class="remove-link" onclick="removeItemFromCart('${item}')">(remove)</span>`;
+                p.innerHTML = `${item} x ${cart[item]} <span class="remove-option" onclick="removeItemFromCart('${item}')">(remove)</span>`;
                 cartContent.appendChild(p);
             }
 

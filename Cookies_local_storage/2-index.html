@@ -34,9 +34,9 @@
             let cookieList = document.cookie.split(';');
             for (let cookie of cookieList) {
                 // split each cookie string into a name/value pair
-                const [cookieName, cookieValue] = cookie.split('=');
-                if (cookieName === name) {
-                    return cookieValue;
+                const [cookieName, cookieValue] = cookie.trim().split('=');
+                if (cookieName.trim() === name) {
+                    return cookieValue.trim();
                 }
             }
             // return empty string if 'name' doesn't exist
